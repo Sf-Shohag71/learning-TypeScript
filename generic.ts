@@ -1,1 +1,2 @@
-console.log("Hello from generic.ts");
+const message = "Hello from generic.ts";
+console.log(message);
