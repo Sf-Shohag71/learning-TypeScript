@@ -16,7 +16,20 @@ interface User {
   age: number;
 }
 
-const user: User = {
-  name: "shohag",
-  age: 27,
+class UserAccount {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+const user: User = new UserAccount("shohag", 27);
+
+const wrapInArray = (obj: string | string[]) => {
+  if (typeof obj === "string") {
+    return [obj];
+  }
+  return obj;
 };
