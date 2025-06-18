@@ -27,9 +27,22 @@ class UserAccount {
 }
 const user: User = new UserAccount("shohag", 27);
 
+// union type
 const wrapInArray = (obj: string | string[]) => {
   if (typeof obj === "string") {
     return [obj];
   }
   return obj;
 };
+
+interface Point {
+  x: number;
+  y: number;
+}
+
+function logPoint(p: Point) {
+  console.log(`x: ${p.x}, y: ${p.y}`);
+}
+
+const point = { x: 10, y: 20 };
+logPoint(point);
